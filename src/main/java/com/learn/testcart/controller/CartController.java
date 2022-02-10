@@ -20,6 +20,6 @@ public class CartController
 	@PostMapping
 	@ResponseStatus(value = HttpStatus.CREATED)
 	public void createCart(@RequestBody CartRequestDto cartRequest){
-		log.info(cartRequest.getEmail());
+		log.info("The user's email id of card {}" + cartRequest.getEmail());
 	}
 }
