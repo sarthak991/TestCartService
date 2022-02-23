@@ -32,8 +32,8 @@ jobs:
           distribution: 'adopt'
           java-version: '11'
       
-      -name: creates jar file
-       run: mvn clean package
+      - name: creates jar file
+        run: mvn clean package
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
