@@ -25,6 +25,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v2
+      
+      - name: setup JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+      
+      -name: creates jar file
+       run: mvn clean package
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
